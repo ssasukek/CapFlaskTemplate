@@ -60,11 +60,13 @@ class ProfileForm(FlaskForm):
     image = FileField("Image") 
     submit = SubmitField('Post')
     role = SelectField('Role',choices=[("Teacher","Teacher"),("Student","Student")])
+    fav_color = SelectField('Color', choices=[("Blue","Blue"),("Red","Red"),("White","White"),("Black","Black")])
 
 class PostForm(FlaskForm):
     subject = StringField('Subject', validators=[DataRequired()])
     content = TextAreaField('Post', validators=[DataRequired()])
     submit = SubmitField('Post')
+    rate_game = SelectField('Rate', choices = [("1", "1"), ("2", "2"), ("3", "3"), ("4", "4"), ("5", "5")])
 
 class CommentForm(FlaskForm):
     content = TextAreaField('Comment', validators=[DataRequired()])

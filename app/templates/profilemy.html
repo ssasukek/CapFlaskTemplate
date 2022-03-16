@@ -11,8 +11,6 @@
 
 <div class="row">
     <div class="col-2">
-        Role: {{current_user.role}} <br>
-
         {% if current_user.image %}
             <img class="img-thumbnail img-fluid" src="data:image;base64,{{base64encode(current_user.image.read())}}"> <br>
         {% else %}
@@ -23,7 +21,8 @@
         {% if current_user.fname and current_user.lname %}
             Real Name: {{current_user.fname}}  {{current_user.lname}} <br>
         {% endif %}
-        
+        Role: {{current_user.role}} <br>
+        Color: {{current_user.fav_color}} <br>
         Username: {{current_user.username}} <br>
         Email: {{current_user.email}}
     </div>
