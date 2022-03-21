@@ -68,3 +68,6 @@ class Comment(Document):
     meta = {
         'ordering': ['-createdate']
     }
+    
+class Donate(Document):
+    
