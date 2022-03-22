@@ -69,5 +69,5 @@ class Comment(Document):
         'ordering': ['-createdate']
     }
     
-class Donate(Document):
+# class Donate(Document):
     
