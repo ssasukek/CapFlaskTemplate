@@ -76,3 +76,4 @@ class DonateForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     email = PasswordField('Email', validators=[DataRequired()])
     submit = SubmitField()
+    money = SelectField ('Amount', choices =[])
