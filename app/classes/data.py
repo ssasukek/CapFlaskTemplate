@@ -69,5 +69,14 @@ class Comment(Document):
         'ordering': ['-createdate']
     }
     
-# class Donate(Document):
-    
+class Donate(Document):
+    author = ReferenceField('User',reverse_delete_rule=CASCADE) 
+    subject = StringField()
+    content = StringField()
+    createdate = DateTimeField(default=dt.datetime.utcnow)
+    modifydate = DateTimeField()
+    rate_game = StringField()
+
+    meta = {
+        'ordering': ['-createdate']
+    }

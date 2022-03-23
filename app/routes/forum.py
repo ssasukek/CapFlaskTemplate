@@ -10,7 +10,7 @@ from flask_login import current_user
 from app.classes.data import Post, Comment
 from app.classes.forms import PostForm, CommentForm
 from flask_login import login_required
-import datetime as dt
+import datetime as dt 
 
 # This is the route to list all posts
 @app.route('/post/list')
