@@ -73,7 +73,6 @@ class CommentForm(FlaskForm):
     submit = SubmitField('Comment')
     
 class DonateForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    remember_me = BooleanField('Remember Me?')
+    name = StringField('Name', validators=[DataRequired()])
+    email = PasswordField('Email', validators=[DataRequired()])
     submit = SubmitField()

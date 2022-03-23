@@ -13,7 +13,3 @@ def test():
 @app.route('/aboutus')
 def aboutus():
     return render_template('aboutus.html')
-
-@app.route('/donation')
-def donation():
-    return render_template('donation.html')
