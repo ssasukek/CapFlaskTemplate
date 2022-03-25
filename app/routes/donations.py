@@ -18,11 +18,11 @@ import datetime as dt
 def donationList():
     # This retrieves all of the 'posts' that are stored in MongoDB and places them in a
     # mongoengine object as a list of dictionaries name 'posts'.
-    Donation = Donations.objects()
+    donations = Donations.objects()
     # This renders (shows to the user) the posts.html template. it also sends the posts object 
     # to the template as a variable named posts.  The template uses a for loop to display
     # each post.
-    return render_template('donation.html',donation=donation)
+    return render_template('donations.html',donations=donations)
 
 # This route renders a form for the user to create a new donation
 @app.route('/donation/new', methods=['GET', 'DONATION'])
@@ -54,7 +54,7 @@ def donationNew():
 
         return redirect(url_for('donation',donationID=newDonation.id))
 
-    return render_template('donation.html',form=form)
+    return render_template('donationform.html',form=form)
 
 @app.route('/donation/<donationID>')
 @login_required
@@ -73,7 +73,7 @@ def donationDelete(donationID):
     else:
         flash("You can't delete a donation you don't own.")
     donations = donation.objects()  
-    return render_template('donations.html',donations=donations)
+    return render_template('donation.html',donations=donations)
 
 @app.route('/donation/edit/<donationID>', methods=['GET', 'DONATION'])
 @login_required

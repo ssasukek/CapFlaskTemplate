@@ -76,6 +76,7 @@ class Donations(Document):
     createdate = DateTimeField(default=dt.datetime.utcnow)
     modifydate = DateTimeField()
     money = FloatField()
+    message = StringField()
 
     meta = {
         'ordering': ['-createdate']
