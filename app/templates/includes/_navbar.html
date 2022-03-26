@@ -17,18 +17,21 @@
             Facts 
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Climate Change</a></li>
-            <li><a class="dropdown-item" href="#">Solutions</a></li>
-            <li><a class="dropdown-item" href="#">Jerry Ideas</a></li>
+            <li><a class="dropdown-item" href="/climatechange">Climate Change</a></li>
+            <li><a class="dropdown-item" href="/solutions">Solutions</a></li>
+            <li><a class="dropdown-item" href="/jerryideas">Jerry Ideas</a></li>
           </ul>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="/donation/new">Donation</a>
-        </li>
+        </li> -->
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         {% if current_user.is_anonymous %}
           <li class="nav-item">
+            <li class="nav-item">
+              <a class="nav-link" href="/donation/new">Donation</a>
+            </li>
             <a class="nav-link" href="{{ url_for('login') }}">Login</a>
           </li>
         {% else %}

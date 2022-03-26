@@ -13,3 +13,15 @@ def test():
 @app.route('/aboutus')
 def aboutus():
     return render_template('aboutus.html')
+
+@app.route('/climatechange')
+def climatechange():
+    return render_template('climatechange.html')
+
+@app.route('/solutions')
+def solutions():
+    return render_template('solutions.html')
+
+@app.route('/jerryideas')
+def jerryideas():
+    return render_template('jerryideas.html')
