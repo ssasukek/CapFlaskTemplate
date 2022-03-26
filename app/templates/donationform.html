@@ -1,0 +1,55 @@
+<!-- This is a blank template.  You can copy this to make a new template page. -->
+
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="row">
+    <div>
+        <h1 style="text-align: center">Adopt-A-Panda</h1>
+
+    </div>
+</div>
+
+<form method=donation>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.name.label }} <br>
+        {{ form.name(cols=64, rows=10) }}
+        <!--List the errors for this field-->
+        {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.email.label }} <br>
+        {{ form.email(cols=64, rows=10) }}
+        <!--List the errors for this field-->
+        {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.message.label }} <br>
+        {{ form.message(cols=50, rows=5) }}
+        <!--List the errors for this field-->
+        {% for error in form.message.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.money.label }} <br>
+        {{ form.money(cols=64, rows=10) }}
+        <!--List the errors for this field-->
+        {% for error in form.money.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{form.submit()}}
+    </p>
+</form>
+
+{% endblock %} 
+
+

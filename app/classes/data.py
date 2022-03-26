@@ -69,13 +69,14 @@ class Comment(Document):
         'ordering': ['-createdate']
     }
     
-class Donate(Document):
+class Donations(Document):
     author = ReferenceField('User',reverse_delete_rule=CASCADE) 
     subject = StringField()
     content = StringField()
     createdate = DateTimeField(default=dt.datetime.utcnow)
     modifydate = DateTimeField()
     money = FloatField()
+    message = StringField()
 
     meta = {
         'ordering': ['-createdate']
