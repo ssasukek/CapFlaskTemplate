@@ -3,21 +3,6 @@
 {% block body %}
 
 {% if donation %}
-
-{{moment(donation.createdate).calendar()}} by {{donation.author.username}} 
-{% if donation.modifydate %}
-    modified {{moment(donation.modifydate).calendar()}}
-{% endif %}
-<br>
-    {% if donation.author == current_user %}
-        <a data-toggle="tooltip" data-placement="top" title="Delete donation" href="/donation/delete/{{donation.id}}">
-            <img width="40" class="bottom-image" src="/static/delete.png">
-        </a>
-        <a data-toggle="tooltip" data-placement="top" title="Edit donation" href="/donation/edit/{{donation.id}}">
-            <img width="40" class="bottom-image" src="/static/edit.png">
-        </a>
-    {% endif %}
-
     <h1 class="display-5">{{donation.subject}}</h1>
     <p class="fs-3 text-break">
         {% if donation.author.image %}
@@ -25,26 +10,16 @@
         {% endif %}
             {{donation.content}}
     </p>
-    <h1 class="display-5">Money: {{donation.money}}</h1>
-    <a href="/comment/new/{{donation.id}}" class="btn btn-primary btn-sm" role="button">New Comment</a>
-
-    <div class="ms-5">
-    {% if comments %}
-    <h1 class="display-5">Comments</h1>
-    {% for comment in comments %}
-        {% if current_user == comment.author %}
-            <a href="/comment/delete/{{comment.id}}"><img width="20" src="/static/delete.png"></a> 
-            <a href="/comment/edit/{{comment.id}}"><img width="20" src="/static/edit.png"></a>
-        {% endif %}
-        {{moment(comment.createdate).calendar()}} {{comment.author.username}} 
-        {% if comment.modifydate %}
-            modified {{moment(comment.modifydate).calendar()}}
-        {% endif %}
-        <br>
-        <p class="fs-3">
-            {{comment.content}}
-        </p>
-    {% endfor %}
+    <h1 class="display-5">Money: ${{donation.money}}0</h1>
+    <h1 class="display-5">Message: {{donation.message}}</h1>
+    {% if donation.money == 10.0 %}
+    <h1 class="display-5">Thank you for 10 dolla</h1>
+    {% elif donation.money == 20.0 %}
+    <h1 class="display-5">Thank you for 20 dolla</h1>
+    {% elif donation.money == 50.0 %}
+    <h1 class="display-5">Thank you for 50 dolla</h1>
+    {% elif donation.money == 100.0 %}
+    <h1 class="display-5">Thank you for 100 dolla</h1>
     {% else %}
         <h1 class="display-5">No Comments</h1>
     {% endif %}

@@ -22,6 +22,6 @@ def climatechange():
 def solutions():
     return render_template('solutions.html')
 
-@app.route('/jerryideas')
-def jerryideas():
-    return render_template('jerryideas.html')
+@app.route('/HI')
+def humanInter():
+    return render_template('humanInter.html')

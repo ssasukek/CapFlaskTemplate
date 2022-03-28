@@ -3,11 +3,8 @@
 {% block body %}
 
 <div class="row">
-    <div class="col-4">
+    <div>
         <h1 class="display-1">All Donations</h1>
-    </div>
-    <div class="col">
-        <a href="/donation/new" class="btn btn-primary btn-sm mt-5" role="button">New donation</a>
     </div>
 </div>
 
@@ -32,15 +29,15 @@
             </div>
             <div class="col">
                 {% if loop.index == 1 %}
-                    <h3 class="display-5">Subject</h3>
+                    <h3 class="display-5">Message</h3>
                 {% endif %}
-                {{donation.subject}}
+                {{donation.message}}
             </div>
             <div class="col">
                 {% if loop.index == 1 %}
                     <h3 class="display-5">Money</h3>
                 {% endif %}
-                {{donation.money}}
+                ${{donation.money}}0
             </div>
             
             
