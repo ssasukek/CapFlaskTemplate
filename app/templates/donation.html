@@ -13,13 +13,14 @@
     <h1 class="display-5">Money: ${{donation.money}}0</h1>
     <h1 class="display-5">Message: {{donation.message}}</h1>
     {% if donation.money == 10.0 %}
-    <h1 class="display-5">Thank you for 10 dolla</h1>
+    <marquee><h1 class="display-5">Thank you for 10 dolla</h1></marquee>
+    <img src="/static/marco.jpg" style="width:50%">
     {% elif donation.money == 20.0 %}
-    <h1 class="display-5">Thank you for 20 dolla</h1>
+    <marquee><h1 class="display-5">Thank you for 20 dolla</h1></marquee>
     {% elif donation.money == 50.0 %}
-    <h1 class="display-5">Thank you for 50 dolla</h1>
+    <marquee><h1 class="display-5">Thank you for 50 dolla</h1></marquee>
     {% elif donation.money == 100.0 %}
-    <h1 class="display-5">Thank you for 100 dolla</h1>
+    <marquee><h1 class="display-5">Thank you for 100 dolla</h1></marquee>
     {% else %}
         <h1 class="display-5">No Comments</h1>
     {% endif %}
