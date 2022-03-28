@@ -71,8 +71,6 @@ class Comment(Document):
     
 class Donations(Document):
     author = ReferenceField('User',reverse_delete_rule=CASCADE) 
-    subject = StringField()
-    content = StringField()
     createdate = DateTimeField(default=dt.datetime.utcnow)
     modifydate = DateTimeField()
     money = FloatField()
