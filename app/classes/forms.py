@@ -77,4 +77,4 @@ class DonationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired()])
     message = TextAreaField('Leave a message', validators=[DataRequired()])
     submit = SubmitField('Post')
-    money = SelectField ('Amount', choices =[("$10","$10"), ("$20","$20"), ("$50","$50"), ("$100","$100")])
+    money = SelectField ('Amount', choices =[("10","$10"), ("20","$20"), ("50","$50"), ("100","$100")])
