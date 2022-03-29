@@ -4,23 +4,37 @@
 
 {% if donation %}
     <h1 class="display-5">{{donation.subject}}</h1>
-    <p class="fs-3 text-break">
+    <p class="fs-3">
         {% if donation.author.image %}
             <img width="120" class="img-thumbnail float-start me-2" src="data:image;base64,{{base64encode(donation.author.image.read())}}">
         {% endif %}
             {{donation.content}}
-    </p>
-    <h1 class="display-5">Money: ${{donation.money}}0</h1>
-    <h1 class="display-5">Message: {{donation.message}}</h1>
+    </p> 
+    <!-- add css for text -->
     {% if donation.money == 10.0 %}
-    <marquee><h1 class="display-5">Thank you for 10 dolla</h1></marquee>
-    <img src="/static/marco.jpg" style="width:50%">
+    <marquee scrollamount="15"><h1 class="display-5">Thank you for your 10 dollar donation</h1></marquee>
+    <h1 class="display-5" style="text-align: center">Thank You {{donation.name}}</h1>
+    <h5 style="text-align: center">You donation of ${{donation.money}}0 has been recieved</h3>
+    <h6 style="text-align: center">Your message: {{donation.message}}</h6>
+    <img class="rounded mx-auto d-block" src="..." style="width:50%">
     {% elif donation.money == 20.0 %}
-    <marquee><h1 class="display-5">Thank you for 20 dolla</h1></marquee>
+    <marquee scrollamount="15"><h1 class="display-5">Thank you for your 20 dollar donation</h1></marquee>
+    <h1 class="display-5" style="text-align: center">Thank You {{donation.name}}</h1>
+    <h5 style="text-align: center">You donation of ${{donation.money}}0 has been recieved</h3>
+    <h6 style="text-align: center">Your message: {{donation.message}}</h6>
+    <img class="rounded mx-auto d-block" src="..." style="width:50%">
     {% elif donation.money == 50.0 %}
-    <marquee><h1 class="display-5">Thank you for 50 dolla</h1></marquee>
+    <marquee scrollamount="15"><h1 class="display-5">Thank you for your 50 dollar donation</h1></marquee>
+    <h1 class="display-5" style="text-align: center">Thank You {{donation.name}}</h1>
+    <h5 style="text-align: center">You donation of ${{donation.money}}0 has been recieved</h3>
+    <h6 style="text-align: center">Your message: {{donation.message}}</h6>
+    <img class="rounded mx-auto d-block" src="..." style="width:50%">
     {% elif donation.money == 100.0 %}
-    <marquee><h1 class="display-5">Thank you for 100 dolla</h1></marquee>
+    <marquee scrollamount="15"><h1 class="display-5">Thank you for your 100 dollar donation</h1></marquee>
+    <h1 class="display-5" style="text-align: center">Thank You {{donation.name}}</h1>
+    <h5 style="text-align: center">You donation of ${{donation.money}}0 has been recieved</h3>
+    <h6 style="text-align: center">Your message: {{donation.message}}</h6>
+    <img class="rounded mx-auto d-block" src="..." style="width:50%">
     {% else %}
         <h1 class="display-5">No Comments</h1>
     {% endif %}

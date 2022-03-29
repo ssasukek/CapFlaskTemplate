@@ -45,6 +45,7 @@ def donationNew():
             # the right side is the data the user entered which is held in the form object.
             money = form.money.data,
             message = form.message.data,
+            name = form.name.data,
             author = current_user.id,
             # This sets the modifydate to the current datetime.
             modifydate = dt.datetime.utcnow
@@ -87,11 +88,13 @@ def donationEdit(donationID):
         editDonations.update(
             money = form.money.data,
             message = form.message.data,
+            name = form.name.data,
             modifydate = dt.datetime.utcnow
         )
         return redirect(url_for('donation',donationID=donationID))
 
     form.money.data = editDonations.money
     form.message.data = editDonations.message
+    form.name.data = editDonations.name
 
     return render_template('donationform.html',form=form)
