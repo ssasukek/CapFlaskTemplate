@@ -6,7 +6,7 @@
 from app import app
 from flask import flash
 from flask_login import UserMixin
-from mongoengine import FileField, EmailField, StringField, ReferenceField, DateTimeField, CASCADE
+from mongoengine import FileField, EmailField, FloatField, StringField, ReferenceField, DateTimeField, CASCADE
 from flask_mongoengine import Document
 from werkzeug.security import generate_password_hash, check_password_hash
 import datetime as dt
@@ -69,5 +69,14 @@ class Comment(Document):
         'ordering': ['-createdate']
     }
     
-# class Donate(Document):
-    
+class Donations(Document):
+    author = ReferenceField('User',reverse_delete_rule=CASCADE) 
+    createdate = DateTimeField(default=dt.datetime.utcnow)
+    modifydate = DateTimeField()
+    money = FloatField()
+    name = StringField()
+    message = StringField()
+
+    meta = {
+        'ordering': ['-createdate']
+    }

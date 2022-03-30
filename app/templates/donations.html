@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="row">
+    <div>
+        <h1 class="display-1">All Donations</h1>
+    </div>
+</div>
+
+{% if donations %}
+    {% for donation in donations %}
+        <div class="row border-bottom">
+            <div class="col-2">
+                {% if loop.index == 1 %}
+                <h3 class="display-5">Date</h3>
+                {% endif %}
+
+                <a href="/donation/{{donation.id}}">
+                    {{moment(donation.createdate).calendar()}}
+                    {{donation.createdate}}
+                </a>
+            </div>
+            <div class="col-2">
+                {% if loop.index == 1 %}
+                <h3 class="display-5">User</h3>
+                {% endif %}
+                {{donation.author.username}}
+            </div>
+            <div class="col">
+                {% if loop.index == 1 %}
+                    <h3 class="display-5">Message</h3>
+                {% endif %}
+                {{donation.message}}
+            </div>
+            <div class="col">
+                {% if loop.index == 1 %}
+                    <h3 class="display-5">Money</h3>
+                {% endif %}
+                ${{donation.money}}0
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <h1>No Donations</h1>
+{% endif %}
+
+{% endblock %}
