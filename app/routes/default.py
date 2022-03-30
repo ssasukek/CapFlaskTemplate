@@ -17,6 +17,7 @@ def aboutus():
 @app.route('/climatechange')
 def climatechange():
     return render_template('climatechange.html')
+<<<<<<< HEAD
 
 @app.route('/solutions')
 def solutions():
@@ -29,3 +30,5 @@ def humanInter():
 @app.route('/blank')
 def blank():
     return render_template('blank.html')
+=======
+>>>>>>> 191461d1293bc368320b400bfddea83d44635181
