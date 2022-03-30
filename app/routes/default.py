@@ -14,10 +14,6 @@ def test():
 def aboutus():
     return render_template('aboutus.html')
 
-@app.route('/donation')
-def donation():
-    return render_template('donation.html')
-
 @app.route('/climatechange')
 def climatechange():
     return render_template('climatechange.html')
