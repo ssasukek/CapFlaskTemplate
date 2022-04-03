@@ -64,19 +64,21 @@
     <a href="/" class="w3-bar-item w3-button">PANDA ROO</a>
     <a href="/aboutus" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT US</a>
     <a href="/post/list" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> POSTS</a>
-    <a href="" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="" class="w3-bar-item w3-button w3-hide-small nav-link dropdown-toggle " id="navbarDropdown"  role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-bullhorn"></i>FACTS</a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
       <li><a class="dropdown-item" href="/climatechange">Climate Change</a></li>
       <li><a class="dropdown-item" href="/solutions">Solutions</a></li>
       <li><a class="dropdown-item" href="/HI">Human Interference</a></li>
     </ul>
+    <ul style="float: right;">
       {% if current_user.is_anonymous %}
           <a class="w3-bar-item w3-button w3-hide-small nav-link " href="{{ url_for('login') }}">LOGIN</a>
       {% else %}
           <a class="w3-bar-item w3-button w3-hide-small nav-link" href="/myprofile">{{ current_user.username }}</a>
           <a class="w3-bar-item w3-button w3-hide-small nav-link" href="{{ url_for('logout') }}">LOGOUT</a>
         {% endif %}
+    </ul>
+      
   </div>
 
   
