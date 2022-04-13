@@ -3,14 +3,14 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
+<link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}"  type="text/css" />
 <div class="row">
     <div>
         <h1 style="text-align: center">Adopt-A-Panda</h1>
 
     </div>
 </div>
-
+<div style="font: left;"
 <form method=post>
     {{ form.hidden_tag() }}
     <p>
@@ -49,6 +49,13 @@
         {{form.submit()}}
     </p>
 </form>
+</div>
+
+<div style="float: right;">
+    <img src="/static/panda.jpg" style="width:50%">
+</div>
+
+
 
 {% endblock %} 
 
