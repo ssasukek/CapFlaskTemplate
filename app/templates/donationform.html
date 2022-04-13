@@ -5,57 +5,56 @@
 {% block body %}
 <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}"  type="text/css" />
 <div class="row">
-    <div>
+    <div class="fontshadow">
         <h1 style="text-align: center">Adopt-A-Panda</h1>
 
     </div>
 </div>
-<div style="font: left;"
-<form method=post>
-    {{ form.hidden_tag() }}
-    <p>
-        {{ form.name.label }} <br>
-        {{ form.name(cols=64, rows=10) }}
-        <!--List the errors for this field-->
-        {% for error in form.name.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.email.label }} <br>
-        {{ form.email(cols=64, rows=10) }}
-        <!--List the errors for this field-->
-        {% for error in form.email.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.message.label }} <br>
-        {{ form.message(cols=50, rows=5) }}
-        <!--List the errors for this field-->
-        {% for error in form.message.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.money.label }} <br>
-        {{ form.money(cols=64, rows=10) }}
-        <!--List the errors for this field-->
-        {% for error in form.money.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{form.submit()}}
-    </p>
-</form>
-</div>
-
-<div style="float: right;">
-    <img src="/static/panda.jpg" style="width:50%">
-</div>
-
-
+<div class="modal-body row">
+    <div class="col-md-6">
+        <form method=post>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.name.label }} <br>
+                {{ form.name(cols=64, rows=10) }}
+                <!--List the errors for this field-->
+                {% for error in form.name.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.email.label }} <br>
+                {{ form.email(cols=64, rows=10) }}
+                <!--List the errors for this field-->
+                {% for error in form.email.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.message.label }} <br>
+                {{ form.message(cols=50, rows=5) }}
+                <!--List the errors for this field-->
+                {% for error in form.message.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.money.label }} <br>
+                {{ form.money(cols=64, rows=10) }}
+                <!--List the errors for this field-->
+                {% for error in form.money.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.submit()}}
+            </p>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <img src="/static/panda.jpg" style="width:100%">    
+    </div>
+  </div>
 
 {% endblock %} 
 
