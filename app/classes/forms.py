@@ -65,6 +65,7 @@ class ProfileForm(FlaskForm):
 class PageForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     directions = StringField('Directions', validators=[DataRequired()])
+    content = StringField('Story Text', validators=[DataRequired()])
     image = FileField("Image")
     c1 = SelectField("Choice 1", choices="[]")
     c2 = SelectField("Choice 2", choices="[]")
