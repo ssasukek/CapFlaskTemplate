@@ -28,7 +28,7 @@ def humanInter():
 
 @app.route('/choice')
 def choice():
-    return render_template('choice.html')
+    return render_template('CYOA/choice.html')
 
 @app.route('/blank')
 def blank():
