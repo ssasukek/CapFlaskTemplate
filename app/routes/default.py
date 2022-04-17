@@ -26,16 +26,6 @@ def solutions():
 def humanInter():
     return render_template('humanInter.html')
 
-@app.route('/choice1')
-def choice1():
-    return render_template('CYOA/choice1.html')
-@app.route('/choice2')
-def choice2():
-    return render_template('CYOA/choice2.html')
-@app.route('/choice3')
-def choice3():
-    return render_template('CYOA/choice3.html')
-
 @app.route('/blank')
 def blank():
     return render_template('blank.html')

@@ -2,45 +2,46 @@
 
 {% block body %}
 <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}"  type="text/css" />
+
 <h1>Climate Change</h1>
-<br>
-<marquee scrollamount="15"><h1>Climate Change</h1></marquee>
-<p>Climate Change is the shifts in the temperature and weather patterns that can affect many places and make different living conditions very hard to live in. It doesn't just affect animals, but every living organism in the world is affected by this well known cause. Many Habitats or places people and organisms live in are very hard due to resources such as food or water is available due to climate change.</p>
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<p>Climate Change is the shifts in the temperature and weather patterns that can affect many places and make different living conditions
+   very hard to live in. It doesn't just affect animals, but every living organism in the world is affected by this well known cause. Many 
+   Habitats or places people and organisms live in are very hard due to resources such as food or water is available due to climate change.</p>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://muslim-science.com/wp-content/uploads/2015/01/panda-515x250.jpg" class="d-block w-100" alt="...">
+        <img class="d-block mx-auto w-50" src="/static/snowpanda.jpg" alt="First slide">
       </div>
       <div class="carousel-item">
-        <img src="https://www.canr.msu.edu/csis/uploads/files/Observing-Brown-%26-White-Giant-Panda.jpg" class="d-block w-100" alt="...">
+        <img class="d-block mx-auto w-50" src="/static/pandaforest.jpg" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img src="https://newsfeed.time.com/wp-content/uploads/sites/9/2012/11/pandas.jpg?w=753" class="d-block w-100" alt="...">
+        <img class="d-block mx-auto w-50" src="/static/pandaeating.jpg" alt="Third slide">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+       <button class="carousel-control-prev" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <button class="carousel-control-next" data-bs-target="#carouselExampleControls" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
+  <div class="modal-body row">
+    <div class="col-md-6">
         Hows Does Climate Change affect Pandas?
         <br>
         <br>
         <p>Climate Change can possibly remove habitats from Pandas making it harder for them to live and find a home. It can also reduce their food supply and water supply causing pandas to force to move or possible die within the conditions they are currently living in.</p>
       </div>
-      <div class="col-sm">
+      <div class="col-md-6">
         How do we resolve this problem?
         <br>
         <br>
         <p>We can resolve this problem by being aware of the things we use and what we eat due to carbon dioxide being trapped within the atmosphere and causing greenhouse gases creating climate change. There are many things we do that creates Carbon Dioxide which makes it harder for us and pandas and any living organism in general to have a hard time to live within their habitats or the places they live in. </p>
       </div>
     </div>
-  </div>
+
 {% endblock %}
+
