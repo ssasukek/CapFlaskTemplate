@@ -3,43 +3,8 @@
 {% block body %}
 <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}"  type="text/css" />
 
-        <form method=post>
-            {{ form.hidden_tag() }}
-            <p>
-                {{ form.title.label }} <br>
-                {{ form.title(size=64) }}
-                <!--List the errors for this field-->
-                {% for error in form.title.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>
-                {{ form.directions.label }} <br>
-                {{ form.directions(size=64) }}
-                <!--List the errors for this field-->
-                {% for error in form.directions.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>
-                {{ form.image.label }} <br>
-                {{ form.image(size=64) }}
-                <!--List the errors for this field-->
-                {% for error in form.image.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>
-                {{ form.c1.label }} <br>
-                {{ form.c1(cols=64, rows=10) }}
-                <!--List the errors for this field-->
-                {% for error in form.c1.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>
-                {{form.submit()}}
-            </p>
-        </form>
-        
+This is pageform
+
+
+
 {% endblock %}
