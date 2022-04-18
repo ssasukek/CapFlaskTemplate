@@ -1,5 +1,7 @@
 from app import app
-from flask import render_template
+from flask import Flask, render_template
+
+
 
 # This is for rendering the home page
 @app.route('/')
@@ -19,8 +21,12 @@ def climatechange():
     return render_template('climatechange.html')
 
 @app.route('/solutions')
-def solutions():
+def solutions_get():
     return render_template('solutions.html')
+
+if __name__ == "__main__":
+    app.run(debug = True)
+
 
 @app.route('/HI')
 def humanInter():
