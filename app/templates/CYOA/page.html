@@ -3,6 +3,20 @@
 {% block body %}
 <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}"  type="text/css" />
 
-this is page
+    {{page.title}}
+    <br>
+    {{page.directions}}
+    <br>
+    <img class="img-thumbnail img-fluid" src="data:image;base64,{{base64encode(page.image.read())}}"> <br>
+
+    <br>
+    {{page.content}}
+    <br>
+    {{page.c1.title}}
+    
+    <br>
+    {{page.c2.title}}
+    <br>
+    {{page.c3.title}}
 
 {% endblock %}

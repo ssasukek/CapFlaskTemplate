@@ -22,6 +22,13 @@ def page(pageID):
 def pageNew():
     # This gets a form object that can be displayed on the template
     form = PageForm()
+    pages = Page.objects()
+    pageChoices = []
+    for page in pages:
+        pageChoices.append((page.id,page.title))
+    form.c1.choices=pageChoices
+    form.c2.choices=pageChoices
+    form.c3.choices=pageChoices
 
     # This is a conditional that evaluates to 'True' if the user submitted the form successfully 
     if form.validate_on_submit():
@@ -33,10 +40,12 @@ def pageNew():
             # the left side is the name of the field from the data table
             # the right side is the data the user entered which is held in the form object.
             title = form.title.data,
-            directions = form.direction.data,
+            directions = form.directions.data,
             image = form.image.data,
             content = form.content.data,
             c1 = form.c1.data,
+            c2 = form.c2.data,
+            c3 = form.c3.data,
         )
         # This is a metod that saves the data to the mongoDB database.
         newPage.save()

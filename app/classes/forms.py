@@ -67,9 +67,9 @@ class PageForm(FlaskForm):
     directions = StringField('Directions', validators=[DataRequired()])
     content = StringField('Story Text', validators=[DataRequired()])
     image = FileField("Image")
-    c1 = SelectField("Choice 1", choices="[]")
-    c2 = SelectField("Choice 2", choices="[]")
-    c3 = SelectField("Choice 3", choices="[]")
+    c1 = SelectField("Choice 1", choices=[], validate_choice=False)
+    c2 = SelectField("Choice 2", choices=[], validate_choice=False)
+    c3 = SelectField("Choice 3", choices=[], validate_choice=False)
     submit = SubmitField('Submit')
 
     
