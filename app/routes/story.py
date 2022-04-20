@@ -9,7 +9,7 @@ from flask import render_template, flash, redirect
 @app.route("/page/list")
 def pageList():
     page = Page.objects()
-    return render_template('/CYOA/page.html', page=page)
+    return render_template('/CYOA/pages.html', page=page)
 
 @app.route("/page/<pageID>")
 def page(pageID):

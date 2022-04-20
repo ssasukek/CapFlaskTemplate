@@ -3,47 +3,9 @@
 {% block body %}
 <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}"  type="text/css" />
 
-<div class="row">
-    <div>
-        <h1 class="display-1">All Pages</h1>
-    </div>
-</div>
-
-{% if pages %}
-    {% for page in pages %}
-        <div class="row border-bottom">
-            <div class="col-2">
-                {% if loop.index == 1 %}
-                <h3 class="display-5">Date</h3>
-                {% endif %}
-
-                <a href="/page/{{page.id}}">
-                    {{moment(page.createdate).calendar()}}
-                    {{page.createdate}}
-                </a>
-            </div>
-            <div class="col-2">
-                {% if loop.index == 1 %}
-                <h3 class="display-5">User</h3>
-                {% endif %}
-                {{page.author.username}}
-            </div>
-            <div class="col">
-                {% if loop.index == 1 %}
-                    <h3 class="display-5">Message</h3>
-                {% endif %}
-                {{page.message}}
-            </div>
-            <div class="col">
-                {% if loop.index == 1 %}
-                    <h3 class="display-5">Money</h3>
-                {% endif %}
-                ${{page.money}}0
-            </div>
-        </div>
-    {% endfor %}
-{% else %}
-    <h1>No Pages</h1>
-{% endif %}
+<button><a href="625f86e5ca9f30156ad0c348">Choice 1</a></button>
+<button><a href="">Choice 2</a></button>
+<button><a href="">Choice 3</a></button>
 
 {% endblock %}
+
