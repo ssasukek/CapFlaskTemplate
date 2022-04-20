@@ -23,10 +23,11 @@ def pageNew():
     # This gets a form object that can be displayed on the template
     form = PageForm()
     pages = Page.objects()
-    pageChoices = []
+    pageChoices = [(" ", " ")]
+
     for page in pages:
         pageChoices.append((page.id,page.title))
-    form.c1.choices=pageChoices
+    form.c1.choices=pageChoices 
     form.c2.choices=pageChoices
     form.c3.choices=pageChoices
 
