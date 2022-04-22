@@ -74,8 +74,18 @@ class Donations(Document):
     createdate = DateTimeField(default=dt.datetime.utcnow)
     modifydate = DateTimeField()
     money = FloatField()
+    name = StringField()
     message = StringField()
 
     meta = {
         'ordering': ['-createdate']
     }
+
+class Page(Document):
+    title = StringField()
+    directions = StringField()
+    image = FileField()
+    content = StringField()
+    c1 = ReferenceField('Page')
+    c2 = ReferenceField('Page')
+    c3 = ReferenceField('Page')

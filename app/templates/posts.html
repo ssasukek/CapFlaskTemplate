@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}"  type="text/css" />
 
 <div class="row">
     <div class="col-4">
@@ -21,9 +22,8 @@
 
                 <a href="/post/{{post.id}}">
                     {{moment(post.createdate).calendar()}}
-                    {{post.createdate}}
                 </a>
-            </div>
+            </div>  
             <div class="col-2">
                 {% if loop.index == 1 %}
                 <h3 class="display-5">User</h3>

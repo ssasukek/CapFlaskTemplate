@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2C6705;">
+<!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2C6705;">
   <div class="container-fluid" >
     <a class="navbar-brand" href="/">Panda Stuff</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="/post/list">Posts</a>
+          <a class="nav-link" href="/aboutus">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/aboutus">About Us</a>
+          <a class="nav-link" href="/post/list">Posts</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -18,16 +18,13 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="/climatechange">Climate Change</a></li>
-            <li><a class="dropdown-item" href="/solutions">Solutions</a></li>
-            <li><a class="dropdown-item" href="/HI">Human Interference</a></li>
+            <li><a class="dropdown-item" href="#">Solutions</a></li>
+            <li><a class="dropdown-item" href="#">Jerry Ideas</a></li>
           </ul>
           <li class="nav-item">
             <a class="nav-link" href="/donation/new">Donation</a>
           </li>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="/donation/new">Donation</a>
-        </li> -->
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         {% if current_user.is_anonymous %}
@@ -46,4 +43,47 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+
+<div class="w3">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+      </a>
+    <a href="/" class="w3-bar-item w3-button">PANDA ROO</a>
+    <a href="/aboutus" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT US</a>
+    <a href="/post/list" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> POSTS</a>
+    <a href="/donation/new" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-globe"></i> DONATION</a>
+    <a href="" class="w3-bar-item w3-button w3-hide-small nav-link dropdown-toggle " id="navbarDropdown"  role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-bullhorn"></i>FACTS</a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="/climatechange">Climate Change</a></li>
+      <li><a class="dropdown-item" href="/solutions">Solutions</a></li>
+      <li><a class="dropdown-item" href="/HI">Human Interference</a></li>
+    </ul>
+    <ul style="float: right;">
+      {% if current_user.is_anonymous %}
+          <a class="w3-bar-item w3-button w3-hide-small nav-link " href="{{ url_for('login') }}">LOGIN</a>
+      {% else %}
+          <a class="w3-bar-item w3-button w3-hide-small nav-link" href="/myprofile">{{ current_user.username }}</a>
+          <a class="w3-bar-item w3-button w3-hide-small nav-link" href="{{ url_for('logout') }}">LOGOUT</a>
+        {% endif %}
+    </ul>
+      
+  </div>
+
+  
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>

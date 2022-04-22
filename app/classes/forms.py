@@ -62,6 +62,18 @@ class ProfileForm(FlaskForm):
     role = SelectField('Role',choices=[("Teacher","Teacher"),("Student","Student")])
     fav_color = SelectField('Color', choices=[("Blue","Blue"),("Red","Red"),("White","White"),("Black","Black")])
 
+class PageForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired()])
+    directions = StringField('Directions', validators=[DataRequired()])
+    content = StringField('Story Text', validators=[DataRequired()])
+    image = FileField("Image")
+    c1 = SelectField("Choice 1", choices="[]")
+    c2 = SelectField("Choice 2", choices="[]")
+    c3 = SelectField("Choice 3", choices="[]")
+    submit = SubmitField('Submit')
+
+    
+
 class PostForm(FlaskForm):
     subject = StringField('Subject', validators=[DataRequired()])
     content = TextAreaField('Post', validators=[DataRequired()])
@@ -76,5 +88,5 @@ class DonationForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired()])
     message = TextAreaField('Leave a message', validators=[DataRequired()])
-    submit = SubmitField('Post')
+    submit = SubmitField('Submit')
     money = SelectField ('Amount', choices =[("10","$10"), ("20","$20"), ("50","$50"), ("100","$100")])

@@ -31,3 +31,9 @@ if __name__ == "__main__":
 @app.route('/HI')
 def humanInter():
     return render_template('humanInter.html')
+
+@app.route('/blank')
+def blank():
+    return render_template('blank.html')
+
+

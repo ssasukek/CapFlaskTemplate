@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
+<link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}"  type="text/css" />
 <div class="row">
     <div>
         <h1 class="display-1">All Donations</h1>
@@ -39,8 +39,6 @@
                 {% endif %}
                 ${{donation.money}}0
             </div>
-            
-            
         </div>
     {% endfor %}
 {% else %}
