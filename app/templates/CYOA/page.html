@@ -11,10 +11,15 @@
     <br>
     {{page.content}}
     <br>
+    {% if choices[0] != "None" %}
     <a href="/page/{{page.c1.id}}">{{page.c1.title}}</a>
+    {% endif %}
     <br>
+    {% if choices[1] != "None" %}
     <a href="/page/{{page.c2.id}}">{{page.c2.title}}</a>
+    {% endif %}
     <br>
+    {% if choices[2] != "None" %}
     <a href="/page/{{page.c3.id}}">{{page.c3.title}}</a>
-
+    {% endif %}
 {% endblock %}
