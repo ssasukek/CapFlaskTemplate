@@ -11,14 +11,10 @@
     <br>
     {{page.content}}
     <br>
-    {% if page.title == "start" %}
-    <a href="626049fb707549f9c0eca7fd">{{page.c1.title}}</a>
-    {% elif page.title == "so close to winning 4" %}
-    <a href="626049d6707549f9c0eca7f9">{{page.c1.title}}</a>
-    {% endif %}
+    <a href="/page/{{page.c1.id}}">{{page.c1.title}}</a>
     <br>
-    <a href="626049ee707549f9c0eca7fb">{{page.c2.title}}</a>
+    <a href="/page/{{page.c2.id}}">{{page.c2.title}}</a>
     <br>
-    <a href="626049d6707549f9c0eca7f9">{{page.c3.title}}</a>
+    <a href="/page/{{page.c3.id}}">{{page.c3.title}}</a>
 
 {% endblock %}
