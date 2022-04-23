@@ -3,6 +3,6 @@ function getBotResponse(input){
         return "hello";
     }
     else{
-        return "I don't undestand what you're saying :("
+        return "I don't undestand what you're saying :( sussy baka"
     }
 }

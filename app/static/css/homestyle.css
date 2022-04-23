@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.wrapper{
+    width:1170px;
+    margin:auto;
+}
+
+header{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/static/panda.jpg");
+    height: 100vh;
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    position: relative;
+}
+
+.logo img{
+    width: 100px;
+    float:left;
+    height:auto;
+}
+
+.welcome-text{
+    position:absolute;
+    width:600px;
+    height: 300px;
+    margin: 20% 30%;
+    text-align:center;
+}
+
+.title{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:40px;
+    border: 3px solid #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.welcome-text h2{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:20px;
+    font-style: italic;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.welcome-text a{
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color:#fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.welcome-text a:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+.text-scroll{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+}
+
