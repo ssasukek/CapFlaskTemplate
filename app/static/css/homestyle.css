@@ -25,7 +25,7 @@ header{
 
 .welcome-text{
     position:absolute;
-    width:600px;
+    width: 600px;
     height: 300px;
     margin: 20% 30%;
     text-align:center;
@@ -38,6 +38,7 @@ header{
     font-size:40px;
     border: 3px solid #fff;
     font-family: 'Roboto Condensed', sans-serif;
+    
 }
 
 .welcome-text h2{
