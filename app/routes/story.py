@@ -14,7 +14,21 @@ def pageList():
 @app.route("/page/<pageID>")
 def page(pageID):
     page = Page.objects.get(id=pageID)
-    return render_template("/CYOA/page.html",page=page)
+    choices = []
+    try:
+        choices.append(page.c1)
+    except:
+        choices.append("None")
+    try:
+        choices.append(page.c2)
+    except:
+        choices.append("None")
+    try:
+        choices.append(page.c3)
+    except:
+        choices.append("None")
+    
+    return render_template("/CYOA/page.html",page=page,choices=choices)
 
 @app.route('/page/new', methods=['GET', 'POST'])
 

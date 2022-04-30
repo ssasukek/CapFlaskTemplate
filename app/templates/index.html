@@ -1,14 +1,21 @@
-{% extends 'base.html' %}
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+</head>
 
 {% block body %}
-<marquee scrollamount="15"><h1>Hello People!!</h1></marquee>
-<style>
-    body {
-      background-image: url("/static/panda.jpg");
-      background-repeat: no-repeat;
-      background-size: 100%;
-    }
-</style>
+<link rel="stylesheet" href="static/css/homestyle.css" />
 
+<header>
+  <div class="logo">
+    <img src="static/logo.png" alt="">
+  </div>
+    <div class="welcome-text">
+      <h1 class="title">Welcome to Panda Roo!</h1>
+      <a href="/climatechange" title="Learn about climate change"> Learn more </a>
+      <h2>A website dedicated to Pandas</h2>
+  </div>
 
+</header>
 {% endblock %}

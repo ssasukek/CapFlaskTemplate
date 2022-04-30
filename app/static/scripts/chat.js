@@ -81,8 +81,11 @@ function heartButton(){
 }
 
 //Press enter to send message
-$("#textInput").keypress(function(e){
-    if(e.which == 13){
-        getResponse();
-    }
+var input = document.getElementById("textInput");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("chat-icon").click();
+    sendButton();
+  }
 });
