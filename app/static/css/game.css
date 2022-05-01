@@ -1,12 +1,26 @@
-body { 
-    background: url("/static/StartGamePage.jpg") no-repeat center fixed; 
-    background-size: 100% 100%;
+body{ 
+    background: url("/static/gamepanda.jpg") no-repeat; 
+    height: 40vh;
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    position: relative;
+}
+
+.gameButton{
+    position:absolute;
+    width: 30%;
+    height: 30%;
+    margin: 5% 25%;
+    text-align: center;
 }
 
 button{
-    background-image: url("/static/start.gif") ;
-    height: 180px;
-    width: 50%;
-    font-size: 16px;
-    text-align: center;
+    background-image: url("/static/start.gif");
+    background-size: cover;
+    width: 330px;
+    height: 150px;
+    margin-top: 200px;
+    margin-left: auto;
+    
 }

@@ -2,22 +2,32 @@
 
 {% block body %}
 <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}"  type="text/css" />
+<link rel="stylesheet" href="static/css/game.css" />
 
-    {{page.title}}
+    <div class="image">
+        <img class="img-thumbnail img-fluid" src="data:image;base64,{{base64encode(page.image.read())}}">
+    </div>
+
     <br>
-    <img class="img-thumbnail img-fluid" src="data:image;base64,{{base64encode(page.image.read())}}">
+
+    <div class="content">
+        {{page.content}}
+    </div>
+
     <br>
-    {{page.content}}
-    <br>
-    {% if choices[0] != "None" %}
-    <a href="/page/{{page.c1.id}}">{{page.c1.directions}}</a>
-    {% endif %}
-    <br>
-    {% if choices[1] != "None" %}
-    <a href="/page/{{page.c2.id}}">{{page.c2.directions}}</a>
-    {% endif %}
-    <br>
-    {% if choices[2] != "None" %}
-    <a href="/page/{{page.c3.id}}">{{page.c3.directions}}</a>
-    {% endif %}
+    
+    <div class="choices">
+        {% if choices[0] != "None" %}
+            <a href="/page/{{page.c1.id}}">{{page.c1.directions}}</a>
+        {% endif %}
+            <br>
+        {% if choices[1] != "None" %}
+            <a href="/page/{{page.c2.id}}">{{page.c2.directions}}</a>
+        {% endif %}
+            <br>
+        {% if choices[2] != "None" %}
+            <a href="/page/{{page.c3.id}}">{{page.c3.directions}}</a>
+        {% endif %}
+    </div>
+    
 {% endblock %}
