@@ -33,7 +33,7 @@ function getTime(){
 
 function firstBotMessage(){
     let firstMessage = "Hello";
-    documents.getElementsById("botStarterMessage").innerHTML = '<p class = "botText"><span>' + firstMessage + '</span></p>';
+    document.getElementsById("botStarterMessage").innerHTML = '<p class = "botText"><span>' + firstMessage + '</span></p>';
 
     let time = getTime();
     $("#chat-timestamp").append(time);
@@ -77,7 +77,7 @@ function sendButton(){
 }
 
 function heartButton(){
-    buttonSendText("Heart clicked!")
+    buttonSendText("❤️")
 }
 
 //Press enter to send message
