@@ -66,7 +66,7 @@ def pageNew():
         newPage.save()
         newPage.reload()
         if form.image.data:
-            newPage.image.put(form.image.data, content_type = 'image/jpeg')
+            newPage.image.put(form.image.data, content_type = 'image/png')
             # This saves all the updates
             newPage.save()
 
@@ -89,7 +89,7 @@ def pageEdit(pageId):
     editPage = Page.objects.get(id=pageId)
     pages = Page.objects()
     pageChoices = [(" ", " ")]
-
+    
     for page in pages:
         pageChoices.append((page.id,page.title))
     form.c1.choices=pageChoices 
@@ -117,7 +117,7 @@ def pageEdit(pageId):
         if form.image.data:
             if editPage.image:
                 editPage.image.delete()
-            editPage.image.put(form.image.data, content_type = 'image/jpeg')
+            editPage.image.put(form.image.data, content_type = 'image/png')
             # This saves all the updates
             editPage.save()
 
@@ -150,4 +150,4 @@ def pageEdit(pageId):
     form.title.data = editPage.title
     form.directions.data = editPage.directions
     form.content.data = editPage.content
-    return render_template('/CYOA/pageform.html',form=form)
+    return render_template('/CYOA/pageform.html',form=form, page=editPage)
