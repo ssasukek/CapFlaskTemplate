@@ -71,6 +71,11 @@
       <li><a class="dropdown-item" href="/solutions">Solutions</a></li>
       <li><a class="dropdown-item" href="/HI">Human Interference</a></li>
     </ul>
+    <a href="" class="w3-bar-item w3-button w3-hide-small nav-link dropdown-toggle " id="navbarDropdown"  role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-bullhorn"></i>Story</a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="/page/list">list</a></li>
+      <li><a class="dropdown-item" href="/page/new">New</a></li>
+    </ul>
     <ul style="float: right;">
       {% if current_user.is_anonymous %}
           <a class="w3-bar-item w3-button w3-hide-small nav-link " href="{{ url_for('login') }}">LOGIN</a>

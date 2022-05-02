@@ -4,8 +4,13 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}"  type="text/css" />
 List of all pages
 <br>
-<button><a href="/page/626dc7ceb8694deb9352c770">Start</a></button>
-
+{% if pages %}
+{% for page in pages %}
+<a href="/page/edit/{{page.id}}">Edit</a> | 
+<a href="/page/delete/{{page.id}}">Delete</a> -  
+<button><a href="/page/{{page.id}}">{{page.title}}</a></button> <br>
+{% endfor %}
+{% endif %}
 
 {% endblock %}
 
