@@ -66,7 +66,7 @@ def pageNew():
         newPage.save()
         newPage.reload()
         if form.image.data:
-            newPage.image.put(form.image.data, content_type = 'image/png')
+            newPage.image.put(form.image.data, content_type = 'image/jpg')
             # This saves all the updates
             newPage.save()
 
@@ -117,9 +117,10 @@ def pageEdit(pageId):
         if form.image.data:
             if editPage.image:
                 editPage.image.delete()
-            editPage.image.put(form.image.data, content_type = 'image/png')
+            editPage.image.put(form.image.data, content_type = 'image/jpg')
             # This saves all the updates
             editPage.save()
+    
 
         return redirect(url_for('page',pageID=editPage.id))
 
@@ -129,15 +130,12 @@ def pageEdit(pageId):
         pass
     else:
         form.c1.default = editPage.c1.id
-
-        
     try: 
         editPage.c2
     except:
         pass
     else:
         form.c2.default = editPage.c2.id
-
     try: 
         editPage.c3
     except:
@@ -150,4 +148,5 @@ def pageEdit(pageId):
     form.title.data = editPage.title
     form.directions.data = editPage.directions
     form.content.data = editPage.content
+    form.image.data = editPage.image
     return render_template('/CYOA/pageform.html',form=form, page=editPage)
