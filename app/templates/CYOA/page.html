@@ -16,16 +16,18 @@
 
     <br>
     
+
+
     <div class="choices">
-        {% if choices[0] != "None" %}
+        {% if page.c1.title != "blank" %}
             <a href="/page/{{page.c1.id}}">{{page.c1.directions}}</a>
         {% endif %}
             <br>
-        {% if choices[1] != "None" %}
+        {% if page.c2.title != "blank" %}
             <a href="/page/{{page.c2.id}}">{{page.c2.directions}}</a>
         {% endif %}
             <br>
-        {% if choices[2] != "None" %}
+        {% if page.c3.title != "blank" %}
             <a href="/page/{{page.c3.id}}">{{page.c3.directions}}</a>
         {% endif %}
     </div>
