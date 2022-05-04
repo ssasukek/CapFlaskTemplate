@@ -5,9 +5,9 @@
 <link rel="stylesheet" href="static/css/game.css" />
 
 
-    <div class="image">
+    {% if page.image %}
         <img class="img-thumbnail img-fluid" src="data:image;base64,{{base64encode(page.image.read())}}">
-    </div>
+    {% endif %}
     <br>
 
     <div class="content">
