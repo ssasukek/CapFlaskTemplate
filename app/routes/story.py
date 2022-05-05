@@ -90,11 +90,13 @@ def pageEdit(pageId):
     pages = Page.objects()
     pageChoices = [(" ", " ")]
     
+    
     for page in pages:
         pageChoices.append((page.id,page.title))
     form.c1.choices=pageChoices 
     form.c2.choices=pageChoices
     form.c3.choices=pageChoices
+
 
     # This is a conditional that evaluates to 'True' if the user submitted the form successfully 
     if form.validate_on_submit():
@@ -143,7 +145,6 @@ def pageEdit(pageId):
     else:
         form.c3.default = editPage.c3.id
     form.process()
-
 
     form.title.data = editPage.title
     form.directions.data = editPage.directions
