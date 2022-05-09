@@ -6,7 +6,7 @@
 
 
     {% if page.image %}
-        <img class="img-thumbnail img-fluid" style="width: 50%; height: 50%;" src="data:image;base64,{{base64encode(page.image.read())}}">
+        <img class="img-fluid" style="width: 50%; height: 50%;" src="data:image;base64,{{base64encode(page.image.read())}}">
     {% endif %}
     <br>
 
@@ -15,8 +15,6 @@
     </div>
 
     <br>
-    
-
 
     <div class="choices">
         {% if page.c1.title != "blank" %}
