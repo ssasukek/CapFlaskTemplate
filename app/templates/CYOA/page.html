@@ -6,7 +6,7 @@
 
 
     {% if page.image %}
-        <img class="img-fluid" style="width: 50%; height: 50%;" src="data:image;base64,{{base64encode(page.image.read())}}">
+        <img class="img-fluid img" style="width: 50%; height: 50%;" src="data:image;base64,{{base64encode(page.image.read())}}">
     {% endif %}
     <br>
 

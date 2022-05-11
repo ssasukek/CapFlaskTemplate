@@ -6,8 +6,22 @@
     text-align: center;
     color:#fff;
     text-transform: uppercase;
-    font-size:10px;
+    font-size:20px;
     margin-top: 15px;
+    font-style: italic;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.choices{
+    text-align: right;
+    text-transform: uppercase;
     font-style: italic;
     font-family: 'Roboto Condensed', sans-serif;
 }
